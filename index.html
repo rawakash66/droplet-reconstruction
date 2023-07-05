@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/vision.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -51,15 +51,15 @@
           <h1 class="title is-1 publication-title">Computer vision-based on-site estimation of contact angle from 3D reconstruction of droplets</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/rawakash/">Akash Kumar</a><sup>1</sup>,
+              <a href="https://www.linkedin.com/in/rawakash/">Akash Kumar</a>,
             </span>
             <span class="author-block">
-              <a href="https://chandraprakashster.wixsite.com/chan/">Dr. C. Chandraprakash</a><sup>1</sup>
+              <a href="https://scholar.google.co.in/citations?user=3DE7MTcAAAAJ&hl=en">C. Chandraprakash</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Indian Institute of Technology Kanpur</span>
+            <span class="author-block">Indian Institute of Technology Kanpur</span>
           </div>
         
           <div class="is-size-5 publisher">
@@ -121,24 +121,26 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-fullbody">
-          <img src="./static/images/P_fig12-13_fmap.png"
-                 class="droplet-image"
-                 alt="Reconstructed droplet image."/>
-        </div>
-        <div class="item item-chair-tp">
-          <img src="./static/images/P_fig6_lensDist.png"
-                 class="droplet-image"
-                 alt="Reconstructed droplet image."/>
-        </div>
-        <div class="item item-shiba">
-          <img src="./static/images/P_fig5_reprojError.png"
-                 class="droplet-image"
-                 alt="Reconstructed droplet image."/>
+          <img 
+            src="./static/images/P_fig12-13_fmap.png"
+            class="feature-map"
+            alt="feature map"
+          />
         </div>
         <div class="item item-steve">
           <img src="./static/images/methodology.png"
-                 class="droplet-image"
-                 alt="Reconstructed droplet image."/>
+                 class="methodology"
+                 alt="Methodology."/>
+        </div>
+        <div class="item item-chair-tp">
+          <img src="./static/images/P_fig6_lensDist.png"
+                 class="lens-distortion"
+                 alt="Lens distortion."/>
+        </div>
+        <div class="item item-shiba">
+          <img src="./static/images/P_fig5_reprojError.png"
+                 class="reprojection-error"
+                 alt="Reprojection error."/>
         </div>
       </div>
     </div>
@@ -188,17 +190,17 @@
 
       <!-- Data Acquisition. -->
       <div class="column">
+      <div class="content">
         <h3 class="title is-4">Data Acquisition</h3>
-        <div class="columns is-centered">
-          <div class="column content">
             <p>
               We used the (a) Motorola Edge 20 Pro mobile phone along with (b) SIGNI Pro 15&times; macro lens for data acquisition. The focal length of the lens varies from 25 to 55 mm. The data acquisition system provides (1836 &times; 3264) 6 MP resolution for the macro images of small (30 &micro;l) droplets
             </p>
-            <img src="./static/images/P_fig2_daq.png"
+          <div class="vcenter">
+              <img src="./static/images/P_fig2_daq.png"
                  class="data-acquisition-image"
                  alt="DA image."/>
           </div>
-
+        </div>
         </div>
       </div>
     </div>
@@ -223,7 +225,7 @@
     <!-- Image Segmentation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h3 class="title is-4">Transparent Droplet Segmentation</h3>
+        <h3 class="title is-4">Silhouette Extraction</h3>
         <div class="content has-text-justified">
           <p>
              We used the U-Net CNN architecture for segmentation due to its robust performance in medical imaging and microscopic image segmentation of transparent irregular-shaped cells. For our purpose, the backbone of the model was taken as the EfficientNet-B4 architecture with pre-trained weights from the imagenet dataset. Below image is the (a) acquired droplet image, (b) ground truth, and (c) prediction from trained model.
