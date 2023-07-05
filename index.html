@@ -89,7 +89,6 @@
                   </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -168,16 +167,15 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
 
       <!-- Setup Images. -->
       <div class="column">
-        <div class="content">
-          <h3 class="title is-4">Experimental Setup</h3>
+        <h3 class="title is-4">Experimental Setup</h3>
+        <div class="content has-text-justified">
           <p>
             A setup was designed to hold and tilt the substrate. It comprises (b,c) base disk, (b,d) two supporting stands, (a,f) four connector joins, and (a,e) stage. All of these were fabricated using polylactic acid on a 3D printer (Ender 3, Creality, Shenzhen, China).
           </p>
@@ -190,8 +188,8 @@
 
       <!-- Data Acquisition. -->
       <div class="column">
-      <div class="content">
         <h3 class="title is-4">Data Acquisition</h3>
+      <div class="content has-text-justified">
             <p>
               We used the (a) Motorola Edge 20 Pro mobile phone along with (b) SIGNI Pro 15&times; macro lens for data acquisition. The focal length of the lens varies from 25 to 55 mm. The data acquisition system provides (1836 &times; 3264) 6 MP resolution for the macro images of small (30 &micro;l) droplets
             </p>
@@ -205,50 +203,73 @@
       </div>
     </div>
     <!--/ Data Acquisition. -->
-    
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Calibration. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h3 class="title is-4">Calibration and Pose Estimation</h3>
         <div class="content has-text-justified">
           <p>
              An asymmetrical pattern of circles was printed on a photo paper of size 10 &times; 7.3 mm<sup>2</sup> for camera calibration and pose estimation purposes. The intrinsic parameters, i.e. intrinsic camera matrix and lens distortion coefficients, were estimated based on the Zhang and Brown-Conrady models, respectively. Below is the (a) pattern image and (b) tracked points
           </p>
-          <img src="./static/images/P_fig4_camCalib.png"
-                 class="val-pred-image"
-                 alt="segmentation image."/>
+          <div class="hcenter">
+            <img src="./static/images/P_fig4_camCalib.png"
+                  style="width: 60%;"
+                  class="val-pred-image"
+                  alt="segmentation image."/>
+          </div>
         </div>
       </div>
     </div>
     <!--/ Calibration. -->
+  </div>
+</section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Image Segmentation. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h3 class="title is-4">Silhouette Extraction</h3>
         <div class="content has-text-justified">
           <p>
-             We used the U-Net CNN architecture for segmentation due to its robust performance in medical imaging and microscopic image segmentation of transparent irregular-shaped cells. For our purpose, the backbone of the model was taken as the EfficientNet-B4 architecture with pre-trained weights from the imagenet dataset. Below image is the (a) acquired droplet image, (b) ground truth, and (c) prediction from trained model.
+             We used the U-Net CNN architecture for segmentation due to its robust performance in medical imaging and microscopic image segmentation of transparent irregular-shaped cells. For our purpose, the backbone of the model was taken as the EfficientNet-B4 architecture with pre-trained weights from the imagenet dataset. Below is the (a) acquired droplet image, (b) ground truth, and (c) prediction from trained model.
           </p>
-          <img src="./static/images/P_fig10_valPred.png"
-                 class="val-pred-image"
-                 alt="segmentation image."/>
+          <div class="hcenter">
+            <img src="./static/images/P_fig10_valPred.png"
+                  style="width: 90%;"
+                  class="val-pred-image"
+                  alt="segmentation image."/>
+          </div>
         </div>
       </div>
     </div>
     <!--/ Segmentation. -->
-    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
     <!-- Space Carving. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h3 class="title is-4">Shape-from-silhouette</h3>
         <div class="content has-text-justified">
           <p>
              We used the space carving algorithm of shape-from-silhouette method. It includes the projection of all 3D points and the generation of the occupancy vector. The occupancy vector stores the visibility information of 3D points across all views. With appropriately chosen threshold we can generate the visual hull of the droplet that can be later used for angle measurement.  
           </p>
-          <img src="./static/images/P_fig15_spaceCarving.png"
-                 class="val-pred-image"
-                 alt="segmentation image."/>
+          <div class="hcenter">
+            <img src="./static/images/P_fig15_spaceCarving.png"
+                  style="width: 80%;"
+                  class="val-pred-image"
+                  alt="segmentation image."/>
+          </div>
         </div>
       </div>
     </div>

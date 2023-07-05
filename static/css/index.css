@@ -156,10 +156,9 @@ body {
   border-radius: 5px;
 }
 
-.half-image {
+.hcenter {
   display: flex;
-  flex-direction: column;
-  
+  justify-content: center;
 }
 
 .last {
