@@ -80,13 +80,13 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/rawakash66/transparent-drop-reconstruction"
+                <button onclick="Alert()"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
+                </button>
               </span>
             </div>
           </div>
@@ -117,31 +117,39 @@
 
 <section class="hero is-light is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container has-text-centered">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-fullbody">
           <img 
+            carousal-img-1
             src="./static/images/P_fig12-13_fmap.png"
-            class="feature-map"
+            class="carousal-img"
             alt="feature map"
           />
         </div>
         <div class="item item-steve">
-          <img src="./static/images/methodology.png"
-                 class="methodology"
-                 alt="Methodology."/>
+          <img 
+          carousal-img-2
+          src="./static/images/methodology.png"
+          class="carousal-img"
+          alt="Methodology."/>
         </div>
         <div class="item item-chair-tp">
-          <img src="./static/images/P_fig6_lensDist.png"
-                 class="lens-distortion"
-                 alt="Lens distortion."/>
+          <img 
+          carousal-img-3
+          src="./static/images/P_fig6_lensDist.png"
+          class="carousal-img"
+          alt="Lens distortion."/>
         </div>
         <div class="item item-shiba">
-          <img src="./static/images/P_fig5_reprojError.png"
-                 class="reprojection-error"
-                 alt="Reprojection error."/>
+          <img 
+          carousal-img-4
+          src="./static/images/P_fig5_reprojError.png"
+          class="carousal-img"
+          alt="Reprojection error."/>
         </div>
       </div>
+      <p><b>Images of feature maps, reconstruction methodology, lens distortion, and reprojection errors.</b></p>
     </div>
   </div>
 </section>

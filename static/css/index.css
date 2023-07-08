@@ -170,3 +170,33 @@ body {
   justify-content: center;
   margin-top: 17%;
 }
+
+.hero.is-light {
+  width: 947px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.carousal-img {
+  height: 225px;
+  cursor: pointer;
+}
+
+.slider-navigation-next {
+  background-color: rgb(204, 203, 203);
+}
+
+.slider-navigation-previous {
+  background-color: rgb(204, 203, 203);
+}
+
+.results-carousel .item:hover {
+  border:2px solid rgb(204, 203, 203);
+  border-style: groove;
+  transition: all 0.15s ease-out;
+}
+
+.link-block button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
