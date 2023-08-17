@@ -172,7 +172,7 @@ body {
 }
 
 .hero.is-light {
-  width: 947px;
+  /* width: 947px; */
   margin: 0 auto;
   background-color: #fff;
 }
